@@ -54,6 +54,7 @@ class Ingredients {
             e.clientY > y &&
             e.clientY < y + h
           ) {
+            Game.addingreisound();
             Game.selectedIngr.push(name);
             console.log(Game.selectedIngr);
           }

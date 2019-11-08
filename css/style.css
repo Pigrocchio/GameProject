@@ -1,0 +1,17 @@
+#bgscreen {
+    background-image: url("/img/bgnuevo.jpg");
+    background-size: cover;
+    height: 760px;
+    width: 1450px;
+}
+
+#start {
+    font-size: 50px;
+    color: whitesmoke;
+    background-color: #556B2F;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 650px;
+    margin-top: 650px;
+}

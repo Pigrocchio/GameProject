@@ -44,7 +44,8 @@ class Entrega {
           e.clientY < y + h
           ) {
             console.log('PUSHED --> LANZAR FUNCTION VERIFY PEDIDO')
-            console.log('es el boton');
+          console.log('es el boton');
+          Game.servepizzasound();
             Game.newEqualALL();
          
           
@@ -86,6 +87,7 @@ class Borrarlastingredients extends Entrega {
           e.clientY < y + h
         ) {
           console.log("BORRO INGREDIENTS");
+          Game.deleteingresound()
             Game.selectedIngr.pop()
           console.log(Game.selectedIngr);
           

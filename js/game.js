@@ -11,7 +11,7 @@ const Game = {
   },
   firstPlay: true,
 
-  // clientsArr: [],
+ 
   oneClientArr: [],
   ingredients: [],
   selectedIngr: [],
@@ -54,18 +54,20 @@ const Game = {
       // this.clients.patienceCounter();
 
       this.changeFps(),
-        // this.generateClients();
+       
 
-        // this.moveAll();
+       
         this.patienceClientsAll();
 
-      // this.clearClients();
+        this.musicbackground();
+      
 
       if (this.score <= 0) {
                 this.gameOver();
       } else if (this.score > 40) {
         this.gameWin()
       }
+      
     }, 5000 / this.fps);
   },
 
@@ -136,8 +138,7 @@ const Game = {
 
     this.background = new Background(this.ctx, this.width, this.height);
 
-    ///Clientes
-    // this.clients = new Clients(this.ctx, 200); //singolo cliente
+   
 
     ///Bottone Entrega e Borrar ingredients
 
@@ -226,7 +227,7 @@ const Game = {
 
     // this.clientsArr.forEach(ele => ele.randomIgreArray()); // genera un array de ingredientes random en clients
 
-    // this.clients.randomIgreArray();
+   
   },
   generarOneClient() {
     console.log(this.oneClientArr);
@@ -245,7 +246,7 @@ const Game = {
 
     this.drawIngreOnPantalla();
 
-    //  this.clients.orderCall(), --------- callorder singolo
+  
 
     // this.clientsArr.forEach(ele => {
     //   if (ele instanceof Clients) {
@@ -260,35 +261,19 @@ const Game = {
     // }); //draw all clients in array
   },
 
-  moveAll() {
-    // this.clientsArr.forEach(ele => ele.move(25 - this.clients[ele]));
-    // this.clients.moveIn();
-  },
-
+ 
   patienceClientsAll() {
     // this.clientsArr.forEach(ele => {
     //   if (ele instanceof Clients) {
     //     ele.patienceCounter();
     //   }
     // });
+
     this.oneClientArr.forEach(ele => ele.patienceCounter("nada"));
     console.log("esto es el metodo pacientall");
   },
 
-  // newEqual(a, b) {
-
-  //     this.clients.orderValue();
-  //     if (a.join("") === b.join("")) {
-  //       console.log("Perfect, seems good");
-
-  //       this.clients.patienceCounter("stop");
-  //       this.score += this.clients._orderValue;
-  //     } else {
-  //       console.log("This is not what I want");
-  //       this.score -= this.clients._orderValue;
-
-  //   }
-  // },
+  
 
   newEqualALL() {
     this.oneClientArr[0].orderValue();
@@ -324,13 +309,7 @@ const Game = {
   },
 
   gameOver() {
-    //  this.ctx.font = "bold 48px serif";
-    //     this.ctx.fillStyle = "red";
-    //     this.ctx.fillText(
-    //       "GAME OVER ",
-    //       400,
-    //       200,
-    //     );
+
     this.firstPlay = false;
     this.background.drawGameOver(this.ctx, 200, 400);
     Game.fps = 60;
@@ -354,5 +333,31 @@ const Game = {
   drawIngreOnPantalla() {
     this.ctx.fillStyle = "red";
     this.ctx.fillText("Selected ingredients:" + this.selectedIngr, 70, 100);
+  },
+
+  ////Audio
+  musicbackground() {
+    this.music = document.getElementById("backgroundmusic").play();
+  },
+
+  addingreisound() {
+    this.addingreclicksound = document.getElementById("addingredientsound").play();
+  },
+
+  deleteingresound() {
+    this.deletesoundingre = document.getElementById("borraingredientssound").play();
+  },
+
+  servepizzasound() {
+    this.servepizza = document.getElementById("entregabutton").play();
+  },
+
+  clientoksound() {
+    this.clientestabienservido = document.getElementById("clientok").play();
+  },
+
+  clientwrong() {
+    this.clientnowronf = document.getElementById("clientwrong");
   }
+
 };
