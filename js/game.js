@@ -202,7 +202,7 @@ const Game = {
       this.ctx,
       350,
       560,
-      "../img/picante.png",
+      "./img/picante.png",
       "picante"
     );
     this.salmon = new Ingredients(
