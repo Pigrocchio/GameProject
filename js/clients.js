@@ -8,10 +8,10 @@ class Clients {
     this._posY = 400;
     this._vel = 5;
     this._imageProfile = [
-      "/img/profile1.png",
-      "/img/profile2.png",
-      "/img/profile3.png",
-      "/img/profile4.png"
+      "./img/profile1.png",
+      "./img/profile2.png",
+      "./img/profile3.png",
+      "./img/profile4.png"
     ];
     let imageRandom = Math.floor(Math.random() * (4 - 0) + 0);
     this._image.src = this._imageProfile[imageRandom];
@@ -24,11 +24,11 @@ class Clients {
 
     ///Alert image cuando sta terminando el tiempo
     this._imageAlert = new Image();
-    this._imageAlert.src = "/img/hurry.png";
+    this._imageAlert.src = "./img/hurry.png";
 
 /////Image cuando il tiempo termina
     this._imageTimeTerminado = new Image();
-    this._imageTimeTerminado.src = "/img/angry-comic-mad-anger-symbol-38812 copy.png";
+    this._imageTimeTerminado.src = "./img/angry-comic-mad-anger-symbol-38812 copy.png";
   }
 
   ///// Para generar una lista de ingredenties random

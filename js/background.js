@@ -5,15 +5,15 @@ class Background {
     this.height = h;
 
     this.image = new Image();
-    this.image.src = "/img/bg.png";
+    this.image.src = "./img/bg.png";
 
     //// background game over
     this.imageGameOver = new Image();
-    this.imageGameOver.src = "/img/gameoverpizzaimg copy.png";
+    this.imageGameOver.src = "./img/gameoverpizzaimg copy.png";
 
     //// background game win
     this.imageGameWin = new Image();
-    this.imageGameWin.src = "/img/winbackgorund.png";
+    this.imageGameWin.src = "./img/winbackgorund.png";
 
     this.posX = 0;
     this.posY = 0;

@@ -149,7 +149,7 @@ const Game = {
       530,
       100,
       100,
-      "/img/buttonentrega.png",
+      "./img/buttonentrega.png",
       "entrega"
     );
 
@@ -159,7 +159,7 @@ const Game = {
       640,
       50,
       50,
-      "/img/deletebutton.png",
+      "./img/deletebutton.png",
       "borrar"
     );
 
@@ -169,7 +169,7 @@ const Game = {
       this.ctx,
       50,
       630,
-      "/img/tomate.png",
+      "./img/tomate.png",
       "tomate"
     );
     this.setas = new Ingredients(this.ctx, 150, 630, "/img/setas.png", "setas");
@@ -177,7 +177,7 @@ const Game = {
       this.ctx,
       250,
       630,
-      "/img/gambas.png",
+      "./img/gambas.png",
       "gambas"
     );
     this.olive = new Ingredients(this.ctx, 350, 630, "/img/olive.png", "olive");
@@ -185,31 +185,31 @@ const Game = {
       this.ctx,
       450,
       630,
-      "/img/pimientos.png",
+      "./img/pimientos.png",
       "pimientos"
     );
 
-    this.pinas = new Ingredients(this.ctx, 50, 560, "/img/pinas.png", "pinas");
-    this.queso = new Ingredients(this.ctx, 150, 560, "/img/queso.png", "queso");
+    this.pinas = new Ingredients(this.ctx, 50, 560, "./img/pinas.png", "pinas");
+    this.queso = new Ingredients(this.ctx, 150, 560, "./img/queso.png", "queso");
     this.mozzarella = new Ingredients(
       this.ctx,
       250,
       560,
-      "/img/mozzarella.png",
+      "./img/mozzarella.png",
       "mozzarella"
     );
     this.picante = new Ingredients(
       this.ctx,
       350,
       560,
-      "/img/picante.png",
+      "./img/picante.png",
       "picante"
     );
     this.salmon = new Ingredients(
       this.ctx,
       450,
       560,
-      "/img/salmon.png",
+      "./img/salmon.png",
       "salmon"
     );
 
