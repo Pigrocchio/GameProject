@@ -149,7 +149,7 @@ const Game = {
       530,
       100,
       100,
-      "./img/buttonentrega.png",
+      "../img/buttonentrega.png",
       "entrega"
     );
 
@@ -172,7 +172,7 @@ const Game = {
       "./img/tomate.png",
       "tomate"
     );
-    this.setas = new Ingredients(this.ctx, 150, 630, "/img/setas.png", "setas");
+    this.setas = new Ingredients(this.ctx, 150, 630, "./img/setas.png", "setas");
     this.gambas = new Ingredients(
       this.ctx,
       250,
@@ -180,7 +180,7 @@ const Game = {
       "./img/gambas.png",
       "gambas"
     );
-    this.olive = new Ingredients(this.ctx, 350, 630, "/img/olive.png", "olive");
+    this.olive = new Ingredients(this.ctx, 350, 630, "./img/olive.png", "olive");
     this.pimientos = new Ingredients(
       this.ctx,
       450,
