@@ -1,8 +1,8 @@
 #bgscreen {
     background-image: url("/img/bgnuevo.jpg");
     background-size: cover;
-    height: 760px;
-    width: 1450px;
+    height: 800px;
+    width: 1440px;
 }
 
 #start {
@@ -12,6 +12,6 @@
     padding: 10px 40px;
     border-radius: 20px;
     font-weight: bold;
-    margin-left: 650px;
-    margin-top: 650px;
+    margin-left: 600px;
+    margin-top: 600px;
 }

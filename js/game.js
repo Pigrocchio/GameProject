@@ -10,6 +10,7 @@ const Game = {
     SPACE: 32
   },
   firstPlay: true,
+  objofDay: 40,
 
  
   oneClientArr: [],
@@ -64,7 +65,7 @@ const Game = {
 
       if (this.score <= 0) {
                 this.gameOver();
-      } else if (this.score > 40) {
+      } else if (this.score > this.objofDay) {
         this.gameWin()
       }
       
@@ -243,7 +244,7 @@ const Game = {
       // this.clients.draw(),
       this.oneClientArr.forEach(elm => elm.draw());
     this.drawScore(), this.oneClientArr.forEach(elm => elm.orderCall());
-
+    this.drawObOfTheDay();
     this.drawIngreOnPantalla();
 
   
@@ -330,15 +331,21 @@ const Game = {
     
 },
 
+  drawObOfTheDay() {
+  this.ctx.fillStyle = "yellow";
+  this.ctx.fillText("Objective of the day = $" + this.objofDay, 70, 40);
+},
+  
   drawIngreOnPantalla() {
     this.ctx.fillStyle = "red";
-    this.ctx.fillText("Selected ingredients:" + this.selectedIngr, 70, 100);
+    this.ctx.fillText("Selected ingredients:" + this.selectedIngr, 70, 90);
   },
 
   ////Audio
   musicbackground() {
     this.music = document.getElementById("backgroundmusic").play();
   },
+  
 
   addingreisound() {
     this.addingreclicksound = document.getElementById("addingredientsound").play();
@@ -358,6 +365,9 @@ const Game = {
 
   clientwrong() {
     this.clientnowronf = document.getElementById("clientwrong");
+  },
+  gameovsoundddd() {
+    this.gameoversound = document.getElementById("gameovvver").play();
   }
 
 };
