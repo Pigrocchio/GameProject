@@ -345,7 +345,6 @@ const Game = {
   musicbackground() {
     this.music = document.getElementById("backgroundmusic").play();
   },
-  
 
   addingreisound() {
     this.addingreclicksound = document.getElementById("addingredientsound").play();
@@ -365,9 +364,6 @@ const Game = {
 
   clientwrong() {
     this.clientnowronf = document.getElementById("clientwrong");
-  },
-  gameovsoundddd() {
-    this.gameoversound = document.getElementById("gameovvver").play();
   }
 
 };
