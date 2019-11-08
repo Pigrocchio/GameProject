@@ -180,7 +180,7 @@ const Game = {
       "./img/gambas.png",
       "gambas"
     );
-    this.olive = new Ingredients(this.ctx, 350, 630, "./img/olive.png", "olive");
+    this.olive = new Ingredients(this.ctx, 350, 630, "../img/olive.png", "olive");
     this.pimientos = new Ingredients(
       this.ctx,
       450,
@@ -202,7 +202,7 @@ const Game = {
       this.ctx,
       350,
       560,
-      "./img/picante.png",
+      "../img/picante.png",
       "picante"
     );
     this.salmon = new Ingredients(
