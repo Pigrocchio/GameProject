@@ -12,7 +12,6 @@ const Game = {
   firstPlay: true,
   objofDay: 40,
 
- 
   oneClientArr: [],
   ingredients: [],
   selectedIngr: [],
@@ -54,21 +53,15 @@ const Game = {
       this.generarOneClient();
       // this.clients.patienceCounter();
 
-      this.changeFps(),
-       
+      this.changeFps(), this.patienceClientsAll();
 
-       
-        this.patienceClientsAll();
-
-        this.musicbackground();
-      
+      this.musicbackground();
 
       if (this.score <= 0) {
-                this.gameOver();
+        this.gameOver();
       } else if (this.score > this.objofDay) {
-        this.gameWin()
+        this.gameWin();
       }
-      
     }, 5000 / this.fps);
   },
 
@@ -139,8 +132,6 @@ const Game = {
 
     this.background = new Background(this.ctx, this.width, this.height);
 
-   
-
     ///Bottone Entrega e Borrar ingredients
 
     this.entregabutton = new Entrega(
@@ -172,7 +163,13 @@ const Game = {
       "./img/tomate.png",
       "tomate"
     );
-    this.setas = new Ingredients(this.ctx, 150, 630, "./img/setas.png", "setas");
+    this.setas = new Ingredients(
+      this.ctx,
+      150,
+      630,
+      "./img/setas.png",
+      "setas"
+    );
     this.gambas = new Ingredients(
       this.ctx,
       250,
@@ -180,7 +177,13 @@ const Game = {
       "./img/gambas.png",
       "gambas"
     );
-    this.olive = new Ingredients(this.ctx, 350, 630, "../img/olive.png", "olive");
+    this.olive = new Ingredients(
+      this.ctx,
+      350,
+      630,
+      "./img/olive.png",
+      "olive"
+    );
     this.pimientos = new Ingredients(
       this.ctx,
       450,
@@ -190,7 +193,13 @@ const Game = {
     );
 
     this.pinas = new Ingredients(this.ctx, 50, 560, "./img/pinas.png", "pinas");
-    this.queso = new Ingredients(this.ctx, 150, 560, "./img/queso.png", "queso");
+    this.queso = new Ingredients(
+      this.ctx,
+      150,
+      560,
+      "./img/queso.png",
+      "queso"
+    );
     this.mozzarella = new Ingredients(
       this.ctx,
       250,
@@ -227,8 +236,6 @@ const Game = {
     );
 
     // this.clientsArr.forEach(ele => ele.randomIgreArray()); // genera un array de ingredientes random en clients
-
-   
   },
   generarOneClient() {
     console.log(this.oneClientArr);
@@ -247,8 +254,6 @@ const Game = {
     this.drawObOfTheDay();
     this.drawIngreOnPantalla();
 
-  
-
     // this.clientsArr.forEach(ele => {
     //   if (ele instanceof Clients) {
     //     ele.orderCall();
@@ -262,7 +267,6 @@ const Game = {
     // }); //draw all clients in array
   },
 
- 
   patienceClientsAll() {
     // this.clientsArr.forEach(ele => {
     //   if (ele instanceof Clients) {
@@ -273,8 +277,6 @@ const Game = {
     this.oneClientArr.forEach(ele => ele.patienceCounter("nada"));
     console.log("esto es el metodo pacientall");
   },
-
-  
 
   newEqualALL() {
     this.oneClientArr[0].orderValue();
@@ -310,7 +312,6 @@ const Game = {
   },
 
   gameOver() {
-
     this.firstPlay = false;
     this.background.drawGameOver(this.ctx, 200, 400);
     Game.fps = 60;
@@ -326,16 +327,15 @@ const Game = {
   },
 
   gameWin() {
-  this.background.drawGameWin()(this.ctx, 200, 400);
+    this.background.drawGameWin()(this.ctx, 200, 400);
     Game.fps = 60;
-    
-},
+  },
 
   drawObOfTheDay() {
-  this.ctx.fillStyle = "yellow";
-  this.ctx.fillText("Objective of the day = $" + this.objofDay, 70, 40);
-},
-  
+    this.ctx.fillStyle = "yellow";
+    this.ctx.fillText("Objective of the day = $" + this.objofDay, 70, 40);
+  },
+
   drawIngreOnPantalla() {
     this.ctx.fillStyle = "red";
     this.ctx.fillText("Selected ingredients:" + this.selectedIngr, 70, 90);
@@ -347,11 +347,15 @@ const Game = {
   },
 
   addingreisound() {
-    this.addingreclicksound = document.getElementById("addingredientsound").play();
+    this.addingreclicksound = document
+      .getElementById("addingredientsound")
+      .play();
   },
 
   deleteingresound() {
-    this.deletesoundingre = document.getElementById("borraingredientssound").play();
+    this.deletesoundingre = document
+      .getElementById("borraingredientssound")
+      .play();
   },
 
   servepizzasound() {
@@ -365,5 +369,4 @@ const Game = {
   clientwrong() {
     this.clientnowronf = document.getElementById("clientwrong");
   }
-
 };
